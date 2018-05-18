@@ -10,10 +10,23 @@ General Format:
 .global _start
 
 _start:
-    MOV R1, #0xA
-    ADD R2, R1, #0x14
-    SUB R3, R2, #0x1
-    MLA R0, R1, R2, R3
+    MOV R1, #5
+    MOV R2, #10
+    CMP R1, R2
+    BEQ vals_equal 
+    BGT r1_gt
+
+r1_lt:
+    MOV R0, #2
+   B end
+
+r1_gt:
+    MOVE R0, #3
+    B end
+
+vals_equal:
+    MOV R0, #1
+
+end:
     MOV R7, #1
     SWI 0
-

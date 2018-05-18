@@ -1,6 +1,8 @@
 @Assembly Language Test
 /*
 Assembly language multi line comment
+General Format:
+[instruction] [destination], [operand], [operand]
 */
 @The .text does not need to be included
 .text
@@ -29,4 +31,3 @@ end:
 .data
 message:
     .ascii " "
-
